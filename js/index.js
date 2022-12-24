@@ -40,3 +40,72 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+ const nav = document.querySelector('nav');
+        for (const [key, value] of Object.entries(siteContent.nav)) {
+          if (key.startsWith('nav-item-')) {
+            const a = document.createElement('a');
+            a.textContent = value;
+            a.href = '#';
+            nav.appendChild(a);
+          }
+        }
+
+   const h1t = document.querySelector('.cta h1') 
+   h1t.textContent = siteContent.cta['h1']
+
+   const boton = document.querySelector('.cta button')  
+   boton.textContent = siteContent.cta['button']
+   
+   const imgHero = document.querySelector('.cta #cta-img')
+   imgHero.setAttribute('src', siteContent.cta['img-src'])
+
+   const featur = document.querySelector('.main-content .text-content h4')
+   featur.textContent = siteContent["main-content"]['features-h4']
+
+   const featureCon = document.querySelector('.main-content .text-content p')
+   featureCon.textContent = siteContent["main-content"]['features-content']
+
+  const topContentDiv = document.querySelector('.top-content');
+  
+  const textContentDiv1 = document.createElement('div');
+  textContentDiv1.classList.add('text-content');
+  
+  const h4 = document.createElement('h4');
+  h4.textContent = siteContent["main-content"]['about-h4'];
+  textContentDiv1.appendChild(h4);
+  
+  const p = document.createElement('p');
+  p.textContent = siteContent["main-content"]['about-content'];
+  textContentDiv1.appendChild(p);
+  
+  topContentDiv.appendChild(textContentDiv1);
+  
+  const middleImage = document.querySelector('#middle-img')
+   middleImage.setAttribute('src', siteContent["main-content"]['middle-img-src'])
+
+const botomCon = document.querySelector('.bottom-content h4')
+botomCon.textContent = siteContent["main-content"]['services-h4']
+const botompar1 = document.querySelector('.bottom-content p')
+botompar1.textContent = siteContent["main-content"]['services-content']
+
+const botoTith4 = document.querySelector('.bottom-content .tith4')
+botoTith4.textContent = siteContent["main-content"]['product-h4']
+const botomTitp = document.querySelector('.bottom-content .titp')
+botomTitp.textContent = siteContent["main-content"]['product-content']
+
+const botoTitle3 = document.querySelector('.bottom-content .title3')
+botoTitle3.textContent = siteContent["main-content"]['vision-h4']
+const visionp = document.querySelector('.bottom-content .para4')
+visionp.textContent = siteContent["main-content"]['vision-content']
+
+const contect = document.querySelector('.contact h4')
+contect.textContent = siteContent.contact['contact-h4']
+const contactp1 = document.querySelector('.contact .para1')
+  contactp1.textContent = siteContent.contact['address']
+const contactp2 = document.querySelector('.contact .para2')
+contactp2.textContent = siteContent.contact['phone']
+ const contactp3 = document.querySelector('.contact .para3')
+ contactp3.textContent = siteContent.contact['email']
+
+const foter = document.querySelector('footer p')
+foter.textContent = siteContent.footer['copyright']
